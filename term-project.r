@@ -1,3 +1,3 @@
 #!/usr/bin/env rscript
 
-1 + 1
+skittles = read.csv("skittle-data.csv")
