@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+set -e
 mkdir -p output
 cd output
 cp ../skittle-data.csv skittle-data.csv
-../term-project.r
+rscript ../term-project.r
+open .
