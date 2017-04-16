@@ -10,7 +10,8 @@ total = sum(row_totals)
 print("Column Totals")
 print(column_totals)
 
-print("Row Totals (individual bags)")
+n_bags = length(row_totals)
+sprintf('Row Totals (%d bags)', n_bags)
 print(row_totals)
 
 print('Total skittles')
