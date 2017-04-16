@@ -18,14 +18,15 @@ print(total)
 
 # Not suitable for labels, due to lowercasing
 skittle_colors = c('red', 'orange', 'yellow', 'green', 'purple')
+skittle_labels = c('Red','Orange','Yellow','Green','Purple')
 
 color_frequencies <- round(100 * column_totals/ sum(column_totals), 1)
 
 png(file="pie.png")
-pie(column_totals, labels = color_frequencies, col=skittle_colors)
-legend("topright", c('Red','Orange','Yellow','Green','Purple'), cex = 0.8, fill = skittle_colors)
+pie(column_totals, main = 'Pie Chart for Skittle Color', labels = color_frequencies, col=skittle_colors)
+legend("topright", skittle_labels, cex = 0.8, fill = skittle_colors)
 dev.off()
 
 png(file='pareto.png')
-pareto.chart(column_totals)
+pareto.chart(column_totals, main = 'Pareto Chart for Skittle Color')
 dev.off()
