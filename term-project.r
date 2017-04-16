@@ -3,15 +3,15 @@
 library(qcc)
 
 skittles = read.csv("skittle-data.csv", header = TRUE)
-columnTotals = colSums(skittles)
-rowTotals = rowSums(skittles)
-total = sum(rowTotals)
+column_totals = colSums(skittles)
+row_totals = rowSums(skittles)
+total = sum(row_totals)
 
 print("Column Totals")
-print(columnTotals)
+print(column_totals)
 
 print("Row Totals (individual bags)")
-print(rowTotals)
+print(row_totals)
 
 print('Total skittles')
 print(total)
@@ -19,9 +19,13 @@ print(total)
 # Not suitable for labels, due to lowercasing
 skittle_colors = c('red', 'orange', 'yellow', 'green', 'purple')
 
-piePercentages <- round(100 * columnTotals/ sum(columnTotals), 1)
+color_frequencies <- round(100 * column_totals/ sum(column_totals), 1)
 
 png(file="pie.png")
-pie(columnTotals, labels = piePercentages, col=skittle_colors)
+pie(column_totals, labels = color_frequencies, col=skittle_colors)
 legend("topright", c('Red','Orange','Yellow','Green','Purple'), cex = 0.8, fill = skittle_colors)
+dev.off()
+
+png(file='pareto.png')
+pareto.chart(column_totals)
 dev.off()
