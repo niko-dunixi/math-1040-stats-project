@@ -1,5 +1,7 @@
 #!/usr/bin/env rscript
 
+library(qcc)
+
 skittles = read.csv("skittle-data.csv", header = TRUE)
 columnTotals = colSums(skittles)
 rowTotals = rowSums(skittles)
