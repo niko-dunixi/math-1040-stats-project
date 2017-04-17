@@ -1,12 +1,28 @@
 https://www.codecogs.com/latex/eqneditor.php
 
+ignorethisline\\
+\text{Skittles per Bag}\\\\
+\text{Five Number Summary}\\
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  Min & Q1 & Median (Q2) & Q3 & Max \\ \hline
+  57 & 59 & 60 & 62 & 64 \\
+  \hline
+\end{tabular}
+\\
+\begin{align*}
+\text{Sample Standard Deviation } s &= 1.74 \\
+\text{Sample Mean } \overline{x} &= 60.375 \\
+\text{Total bags } n &= 24
+\end{align*}
+
 \begin{align*}
 ignore this line\\
-\hat{p} &= \frac{296}{1449} = 0.2042788 \\
-e &= z_\frac{a}{2} * \sqrt{\frac{\hat{p} * (1 - \hat{p}))}{n}} = 2.575 * \sqrt{\frac{0.204279 * (1 - 0.204279)}{1449}} = 0.027273
+\hat{p} &= \frac{296}{1449} = 0.204 \\
+e &= z_\frac{a}{2} * \sqrt{\frac{\hat{p} * (1 - \hat{p}))}{n}} = 2.575 * \sqrt{\frac{0.204 * (1 - 0.204)}{1449}} = 0.027273
 \\\\ thus \\\\
 \text{confidence interval} &= (\hat{p} - e, \hat{p} + e)\\
-&= (0.177, 0.232)
+&= (0.177, 0.231)
 \end{align*}
 
 \begin{align*}
@@ -14,9 +30,7 @@ ignore this line\\
 n &= 24 \\
 df &= n - 1 = 23 \\
 t &= 1.714 \\
-\overline{x} &= 60.375 \\
-s &= 1.739878 \\
-e &= t * \frac{s}{\sqrt{n}} = 1.714 * \frac{1.739878}{\sqrt{24}}  = 0.608729\\
+e &= t * \frac{s}{\sqrt{n}} = 1.714 * \frac{1.74}{\sqrt{24}}  = 0.608772\\
 \\ thus \\\\
 \text{confidence interval} &= (\overline{x} - e, \overline{x} + e) \\
 &= (59.766, 60.984)

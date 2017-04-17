@@ -42,20 +42,33 @@ hist(row_totals, main = 'Histogram for Skittles per Bag', xlab='Skittles per Bag
 
 dev.off()
 
+print('')
+print('Five number summary')
+min_per_bag = min(row_totals)
+max_per_bag = max(row_totals)
+sprintf('Min per bag: %f', min_per_bag)
+sprintf('Max per bag: %f', max_per_bag)
+sprintf('Range: %f', max_per_bag - min_per_bag)
+q1 = round(quantile(row_totals, 0.25), digits=1)
+q2 = round(quantile(row_totals, 0.50), digits=1)
+q3 = round(quantile(row_totals, 0.75), digits=1)
+sprintf('Quartiles: %f, %f, %f', q1, q2, q3)
+sprintf('StdDev s: %f', s_candy_per_bag)
+x_bar = total / n_bags
+sprintf('Sample average x_bar: %f', x_bar)
+print('')
+
 print('Confidence interval for yellow proportion')
-p_hat_yellow = column_totals['Yellow'] / total
+p_hat_yellow = round(column_totals['Yellow'] / total, digits=3)
 sprintf('p_hat_yellow: %f', p_hat_yellow)
 z_a2_yellow = 2.575
 sprintf('z/a2_yellow: %f', z_a2_yellow)
 e_yellow = z_a2_yellow * sqrt((p_hat_yellow * (1 - p_hat_yellow)) / total)
 sprintf('e_yellow: %f', e_yellow)
-sprintf('P Yellow Confidence: (%f, %f)', p_hat_yellow - e_yellow, p_hat_yellow + e_yellow)
+sprintf('P Yellow Confidence: (%f, %f)', round(p_hat_yellow - e_yellow, digits=3), round(p_hat_yellow + e_yellow, digits=3))
 print('')
 
 print('Confidence interval for number of skittles per bag')
-sprintf('StdDev s: %f', s_candy_per_bag)
-x_bar = total / n_bags
-sprintf('Sample average x_bar: %f', x_bar)
 t_mean = 1.714
 e_mean = t_mean * s_candy_per_bag / sqrt(n_bags)
 sprintf('Error for mean interval: %f', e_mean)
