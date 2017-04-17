@@ -1,14 +1,16 @@
 https://www.codecogs.com/latex/eqneditor.php
 
 \begin{align*}
+ignore this line\\
 \hat{p} &= \frac{296}{1449} = 0.2042788 \\
 e &= z_\frac{a}{2} * \sqrt{\frac{\hat{p} * (1 - \hat{p}))}{n}} = 2.575 * \sqrt{\frac{0.204279 * (1 - 0.204279)}{1449}} = 0.027273
 \\\\ thus \\\\
 \text{confidence level} &= (\hat{p} - e, \hat{p} + e)\\
-&= (0.177006, 0.231552)
+&= (0.177, 0.232)
 \end{align*}
 
 \begin{align*}
+ignore this line\\
 n &= 24 \\
 df &= n - 1 = 23 \\
 t &= 1.714 \\
@@ -17,5 +19,5 @@ s &= 1.739878 \\
 e &= t * \frac{s}{\sqrt{n}} = 1.714 * \frac{1.739878}{\sqrt{24}}  = 0.608729\\
 \\ thus \\\\
 \text{confidence interval} &= (\overline{x} - e, \overline{x} + e) \\
-&= (59.766271, 60.983729)
+&= (59.766, 60.984)
 \end{align*}
