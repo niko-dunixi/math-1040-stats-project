@@ -21,10 +21,10 @@ print(total)
 skittle_colors = c('red', 'orange', 'yellow', 'green', 'purple')
 skittle_labels = c('Red','Orange','Yellow','Green','Purple')
 
-color_frequencies <- round(100 * column_totals/ sum(column_totals), 1)
+color_frequencies <- round(100 * column_totals/ sum(column_totals), 2)
 s_candy_per_bag = sd(row_totals)
 # We need to round to two decimals, per instruction
-s_candy_per_bag = round(s_candy_per_bag, digits = 2)
+s_candy_per_bag = round(s_candy_per_bag, digits = 3)
 
 png(file="pie.png")
 pie(column_totals, main = 'Pie Chart for Skittle Color', labels = color_frequencies, col=skittle_colors)
@@ -33,9 +33,12 @@ legend("topright", skittle_labels, cex = 0.8, fill = skittle_colors)
 png(file='pareto.png')
 pareto.chart(column_totals, main = 'Pareto Chart for Skittle Color')
 
-png(file='box-plot-candies-per-bag.png')
+png(file='boxplot-candies-per-bag.png')
 boxplot(row_totals)
 title('Boxplot for Skittles per Bag')
+
+png(file='histogram-candies-per-bag.png')
+hist(row_totals, main = 'Histogram for Skittles per Bag', xlab='Skittles per Bag')
 
 dev.off()
 
