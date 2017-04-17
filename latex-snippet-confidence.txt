@@ -1,3 +1,5 @@
+https://www.codecogs.com/latex/eqneditor.php
+
 \begin{align*}
 \hat{p} &= \frac{296}{1449} = 0.2042788 \\
 e &= z_\frac{a}{2} * \sqrt{\frac{\hat{p} * (1 - \hat{p}))}{n}} = 2.575 * \sqrt{\frac{0.204279 * (1 - 0.204279)}{1449}} = 0.027273
