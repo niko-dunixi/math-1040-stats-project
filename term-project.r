@@ -31,3 +31,22 @@ dev.off()
 png(file='pareto.png')
 pareto.chart(column_totals, main = 'Pareto Chart for Skittle Color')
 dev.off()
+
+print('Confidence interval for yellow proportion')
+p_hat_yellow = column_totals['Yellow'] / total
+sprintf('p_hat_yellow: %f', p_hat_yellow)
+z_a2_yellow = 2.575
+sprintf('z/a2_yellow: %f', z_a2_yellow)
+e_yellow = z_a2_yellow * sqrt((p_hat_yellow * (1 - p_hat_yellow)) / total)
+sprintf('e_yellow: %f', e_yellow)
+sprintf('P Yellow Confidence: (%f, %f)', p_hat_yellow - e_yellow, p_hat_yellow + e_yellow)
+print('')
+
+print('Confidence interval for number of skittles per bag')
+s_candy_per_bag = sd(row_totals)
+sprintf('StdDev s: %f', s_candy_per_bag)
+x_bar = total / n_bags
+sprintf('Sample average x_bar: %f', x_bar)
+t_mean = 1.714
+e_mean = t_mean * s_candy_per_bag / sqrt(n_bags)
+sprintf('Error for mean interval: %f', e_mean)
