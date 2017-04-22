@@ -70,6 +70,7 @@ sprintf('P Yellow Confidence: (%f, %f)', round(p_hat_yellow - e_yellow, digits=3
 print('')
 
 print('Confidence interval for number of skittles per bag')
-t_mean = 1.714
+t_mean = 2.069
 e_mean = t_mean * s_candy_per_bag / sqrt(n_bags)
 sprintf('Error for mean interval: %f', e_mean)
+sprintf('Interval xbar +- e (%f, %f)', round(x_bar - e_mean, digits=3), round(x_bar + e_mean, digits=3))

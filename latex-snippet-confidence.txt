@@ -27,11 +27,10 @@ e &= z_\frac{a}{2} * \sqrt{\frac{\hat{p} * (1 - \hat{p}))}{n}} = 2.575 * \sqrt{\
 
 \begin{align*}
 ignore this line\\
-n &= 24 \\
 df &= n - 1 = 23 \\
 t &= 1.714 \\
 e &= t * \frac{s}{\sqrt{n}} = 1.714 * \frac{1.74}{\sqrt{24}}  = 0.608772\\
 \\ thus \\\\
 \text{confidence interval} &= (\overline{x} - e, \overline{x} + e) \\
-&= (59.766, 60.984)
+&= (59.665, 61.135)
 \end{align*}
